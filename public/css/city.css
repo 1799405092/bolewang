@@ -1,0 +1,34 @@
+.cover{padding-top:40px;background-color:#f6f6f5}
+.cover .ptit .e:before,.cover .ncity:before{background:url(../img/index/minggi/log/icon_city.png) no-repeat;background-size:17px auto}
+.cover .t_phead i:first-child:after,
+	.cover .ptit .e:before,.cover .ptit .e:after,
+	.cover .ncity:before,
+	.cover .clist:before,.cover .clist:after,
+	.cover .plist .i:before,.cover .plist .i:after{content:"\00a0"}
+.cover .ncity,.cover .clist{margin-bottom:8px}
+.cover .t_phead{position:fixed;width:100%;height:40px;line-height:40px;color:#333;text-align:center;top:0;left:0;background-color:#fc913a;z-index:2}
+.cover .t_phead .p2{font-size:15px;margin:0 60px}
+.cover .t_phead i{position:absolute;width:60px;left:0;top:0}
+.cover .t_phead i:first-child{height:100%}
+.cover .t_phead i:first-child:after{position:absolute;display:block;width:13px;height:23px;top:8px;left: 14px;
+    background:url(../img/index/minggi/log/icon_a.png) no-repeat 0 -55px;background-size:40px}
+.cover .ptit{background-color:#fff}
+.cover .ptit .e{position:relative;display:block;line-height:24px;color:#777;padding:7px 16px 7px 35px}
+.cover .ptit .e:before{position:absolute;width:20px;height:20px;left:16px;top:50%;margin-top:-10px}
+.cover .ptit .e:after,.cover .plist .i:after{position:absolute;height:1px;right:0;bottom:0;left:16px;background-color:#d4d4d4}
+.cover .ncity{height:46px;line-height:46px;font-size:16px;color:#333;background-color:#fff}
+.cover .ncity:before{float:left;width:17px;height:22px;margin:12px 5px 0 16px;background-position:0 -22px}
+.cover .clist{position:relative;overflow:hidden;background-color:#fff}
+.cover .clist:before,.cover .clist:after{position:absolute;left:0;background-color:#fff}
+.cover .clist:before{width:16px;height:100%;top:0}
+.cover .clist:after{width:100%;height:1px;bottom:0}
+.cover .clist a{position:relative;float:left;width:25%;height:46px;line-height:46px;color:#333;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;border-bottom:1px solid #d4d4d4}
+.cover .plist{background-color:#fff}
+.cover .plist .i{position:relative;display:block;line-height:24px;color:#333;padding:10px 32px 10px 16px}
+.cover .plist .i:last-child:after{display:none}
+.cover .plist .i:before{position:absolute;width:15px;height:15px;right:15px;top:50%;margin-top:-7px;background:url(../img/index/minggi/log/icon_a.png) no-repeat 4px -20px;background-size:40px auto}
+.cover .plist .down:before{background-position:-20px -20px}
+.cover .plist .down:after{left:0}
+.cover .plist .clist{margin-bottom:0}
+.cover .plist .clist,.cover .plist .clist:before{background-color:#f9f9f9}
+.cover .plist .clist:after{background-color:#d4d4d4}

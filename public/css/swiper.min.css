@@ -1,0 +1,26 @@
+/*this is not a base swiper style*/
+.swiper-container{
+    position:relative;z-index:1;
+    overflow:hidden;margin:0 auto;
+    backface-visibility:hidden}
+.swiper-wrapper{
+    position:relative;
+    transition-timing-function:ease;
+    transition-duration:0s;
+    transition-property:transform,left,top;
+    transform:translate3d(0px,0,0);}
+.swiper-free-mode>.swiper-wrapper{
+    margin:0 auto;
+    transition-timing-function:ease-out;}
+.swiper-slide{float:left;box-sizing:content-box}
+.swiper-slide{width:100%}
+.swiper-scrollbar{
+    border-radius:10px;
+    position:relative;background:rgba(0,0,0,0.1)}
+.swiper-scrollbar-drag{
+    height:100%;
+    width:100%;
+    position:relative;
+    background:rgba(0,0,0,0.5);
+    border-radius:10px}
+.swiper-scrollbar-cursor-drag{cursor:move}

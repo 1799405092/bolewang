@@ -1,0 +1,97 @@
+ .sbox .txt,.sbox .selt .sval{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/*.sbox .e.e_ta label,input[type="date"],input[type="month"]{
+	-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box} */
+/* 
+.shead{overflow:hidden;
+	background:url(//img01.51jobcdn.com/im/mobile/miduoduo/bg_shead.png),-webkit-linear-gradient(left,#ff773e,#ffbb3e);
+	background:-moz-url(//img01.51jobcdn.com/im/mobile/miduoduo/bg_shead.png),-moz-linear-gradient(right,#ff773e,#ffbb3e);
+	background:-o-url(//img01.51jobcdn.com/im/mobile/miduoduo/bg_shead.png),-o-linear-gradient(right,#ff773e,#ffbb3e);
+	background:url(//img01.51jobcdn.com/im/mobile/miduoduo/bg_shead.png),linear-gradient(to right,#ff773e,#ffbb3e);
+	} */
+.shead .title{height:40px;line-height:40px;font-size:16px;font-weight:bold;color:#fff;letter-spacing:2px;text-align:center}
+.shead .guide{padding-top:10px;height:86px}
+.shead .guide ul{width:268px;margin:0 auto}
+.shead .guide ul li{position:relative;display:inline-block;width:44px;height:44px;margin-right:22px;border:1px solid #fff;opacity:0.6;border-radius:50%}
+.shead .guide ul li:after{position:absolute;width:28px;height:0;content:'\00a0';top:50%;right:-28px;border-top:1px solid #fff}
+.shead .guide ul li:last-child{margin-right:0}
+.shead .guide ul li:last-child:after{display:none}
+.shead .guide ul li span{position:absolute;width:38px;height:38px;line-height:38px;font-size:26px;color:#fff;text-align:center;top:3px;left:3px;
+	-webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%}
+.shead .guide ul li.on{opacity:1}
+.shead .guide ul li.on:before{position:absolute;width:120px;line-height:40px;content:'基本信息';font-size:15px;color:#fff;text-align:center;top:46px;left:50%;margin-left:-60px}
+.shead .guide ul li:nth-child(2).on:before{content:'最高教育经历'}
+.shead .guide ul li:nth-child(3).on:before{content:'最近工作经验'}
+.shead .guide ul li:nth-child(4).on:before{content:'求职意向'}
+.shead .guide ul li.on span{color:#ff7e3e;background-color:#fff}
+.shead .guide ul li.on span:after{position:absolute;width:0;height:0;content:'\00a0';bottom:-12px;left:50%;margin-left:-4px;border-width:4px;border-style:solid;border-color:#fff transparent transparent transparent}
+.shead .guide ul li.next{opacity:1;border-color:rgb(255, 255, 255) rgba(255,255,255,0.6) rgba(255,255,255,0.6) rgba(255,255,255,0.6);
+	-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}
+.shead .guide ul li.next:after{top:47px;right:-16px}
+.shead .guide ul li.next span,.shead .guide ul li.next:after{opacity:0.6;
+	-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}
+.shead .guide ul li.pre{opacity:1}
+
+.sbox .e{position:relative;display:block;min-height:32px;line-height:32px;color:#444;padding:8px 26px 8px 95px;background-color:#fff}
+.sbox a.e:after,.sbox .selt:after{position:absolute;width:8px;height:14px;content:'\00a0';top:17px;right:11px;background:url(//img01.51jobcdn.com/im/mobile/miduoduo/arrow_gray.png) no-repeat;
+    -webkit-background-size:100% 100%;-moz-background-size:100% 100%;-o-background-size:100% 100%;-ms-background-size:100% 100%;background-size:100% 100%}
+.sbox .e:before,.sbox .e.lb_w:after,.sbox .custom.lb_w:before,.sbox .custom:after{position:absolute;height:0;content:'\00a0';font-size:0;left:11px;right:11px;bottom:0;border-bottom:1px solid #e6e6e6}
+.sbox .e_ta:last-child:before{display:none}
+.sbox .e.e2{padding-right:0}
+.sbox .e.long{padding-left:118px}
+.sbox .e.lb_w{margin-top:-1px;padding:8px 26px}
+.sbox .e.lb_w:after,.sbox .custom.lb_w:before{top:0;border-bottom-style:dashed}
+.sbox .e.e_ta{padding:0 11px 8px 11px}
+.sbox .e.e_ta label{position:relative;display:block;left:11px;margin-bottom:16px}
+.sbox .e.e_ta .error{line-height:30px}
+.sbox .e.e_ta .error:before{height:30px}
+.sbox .e label{position:absolute;text-align:left;left:21px;top:8px}
+.sbox .e label em{position:absolute;color:#ff6000;left:-8px;top:0}
+.sbox .e input[type="text"]{background-color:transparent}
+.sbox .e .error{line-height:20px;font-size:12px;color:#F00;text-align:right}
+.sbox .e .error:before{display:inline-block;width:15px;height:20px;content:'\00a0';margin-right:5px;background:url(//img01.51jobcdn.com/im/mobile/miduoduo/icon_err.png) center no-repeat;
+	-webkit-background-size:15px;-moz-background-size:15px;-ms-background-size:15px;-o-background-size:15px;background-size:15px}
+.sbox .txt{display:block;width:100%;height:32px;line-height:32px;color:#444;text-align:right}
+.sbox .ptxa{height:130px;padding:6px 11px;background-color:#f6f6f6}
+.sbox .ptxa.noNum{height:110px}
+.sbox .ptxa textarea{width:100%;height:110px;line-height:20px;font-size:12px;vertical-align:top;padding:0;background-color:transparent;border:none}
+.sbox .ptxa .gray{line-height:20px;font-size:12px;text-align:right}
+.sbox .tbox{position:relative;min-height:32px;padding-right:60px}
+.sbox .tbox .wy{position:absolute;top:0;right:26px}
+.sbox .rdob{text-align:right}
+.sbox .rdo{position:relative;display:inline-block;height:22px;line-height:22px;padding-left:50px}
+.sbox .rdo:after{position:absolute;width:22px;height:22px;left:20px;content:'\00a0';background:url(//img01.51jobcdn.com/im/mobile/miduoduo/icon_radio.png) no-repeat;
+    -webkit-background-size:75px auto;-moz-background-size:75px auto;-o-background-size:75px auto;-ms-background-size:75px auto;background-size:75px auto}
+.sbox .rdo.on:after{background-position:-25px 0}
+.sbox .selt .sval{display:block;text-align:right}
+.sbox .selt select,input[type="date"],input[type="month"]{position:absolute;width:100%;height:100%;overflow:visible;top:0;left:0;opacity:0;border:0 none;z-index:2}
+input[type="date"],input[type="month"]{min-width:100%}
+.sbox .rt{float:right}
+.sbox .rt .selt,.sbox .rt .rdob{float:left}
+.sbox .rt .rdob{position:relative;margin-right:10px;z-index:3}
+.sbox .c_default{color:#999}
+.sbox .custom{position:relative;padding:0 11px;background-color:#fff}
+.sbox .custom:after{bottom:-1px;z-index:2}
+.sbox .custom.lb_w{margin-top:-1px}
+.sbox .custom.lb_w:before{top:-1px}
+.sbox .custom .iptb{line-height:32px;text-align:right;padding:8px 15px;background-color:#fff8ed}
+.sbox .custom .iptb .error{line-height:20px;font-size:12px;color:#F00;text-align:right}
+.sbox .custom .iptb .error:before{display:inline-block;width:15px;height:20px;content:'\00a0';margin-right:5px;background:url(//img01.51jobcdn.com/im/mobile/m/icon_err.png) center no-repeat;
+	-webkit-background-size:15px;-moz-background-size:15px;-ms-background-size:15px;-o-background-size:15px;background-size:15px}
+.sbox .custom .slash{display:inline-block;padding:0 11px}
+.sbox .custom .ipt .txt{background-color:transparent}
+.sbox .custom .ipt{display:inline-block;width:60px;top:0}
+.sbox .custom .warn{font-size:12px;color:#4c99ff;text-align:right;padding:0 15px 0 8px;background-color:#ede8e1}
+.sbox .custom .warn:before{display:inline-block;width:12px;height:100%;content:'\00a0';margin-right:5px;background:url(//img01.51jobcdn.com/im/mobile/m/icon_warn.png) center no-repeat;
+	-webkit-background-size:12px;-moz-background-size:12px;-o-background-size:12px;-ms-background-size:12px;background-size:12px}
+
+.btnbox{padding:50px 5%;background-color:#fff}
+.btn{width:100%;height:40px;line-height:40px;font-size:15px;font-weight:bold;color:#fff;text-align:center;letter-spacing:3px;background-color:#ff7e3e;border:1px solid #ff7e3e;-webkit-appearance:none;
+	-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;-ms-border-radius:5px;border-radius:5px}
+.btn_s{width:40%;margin:0 4%}
+
+.asslist{position:absolute;width:100%;max-height:200px;top:100%;right:11px;margin-top:-1px;padding-left:136px;z-index:9}
+.asslist .cn{padding:8px 15px;background-color:#fffbf4;border:1px solid #f3f3f3}
+.asslist .ae{display:block;line-height:32px;font-size:13px;color:#111;text-align:right}
+
+.job_ass{position:absolute;width:60%;right:11px;top:48px;text-align:right;padding:10px 20px 10px 10px;background-color:#fffbf4;border:1px solid #f3f3f3;z-index:3}
+.job_ass li{height:30px;line-height:30px;color:#111111;font-size:13px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}

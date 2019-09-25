@@ -1,0 +1,120 @@
+html,body{height:100%}
+body{background-color:#fff}
+.head1{
+    position:relative;height:44px;line-height:44px;
+    text-align:center;background-color:#fff;
+}
+.head1 a{
+    position:absolute;width:44px;height:44px;top:0;left:0;
+}
+.head1 a:after{
+    content:'';position:absolute;width:20px;height:20px;
+    left:50%;top:50%;margin:-10px 0 0 -10px;
+    /* background:url(https://img01.51jobcdn.com/im/2018/mobile/miduoduo/icon_1.png) 6px -17px no-repeat; */
+    transform: rotate(-180deg);
+}
+.l_r{
+    padding:20px;text-align:center;color:#999;font-size:13px;margin-bottom:5px;
+}
+.lmain{padding:0 26px}
+.lmain .e{
+    position:relative;
+    border-bottom:1px solid #ededed;
+}
+.lmain .e input{
+    width:100%;
+    line-height:50px;
+}
+.lmain .e.e1{padding-right:32px}
+.lmain .e.e2{padding-right:55px}
+.lmain .e.e3{padding-right:110px}
+.lmain .e.e2 .clear{right:22px}
+.lmain .e.e3 .clear{right:70px}
+.lmain .e.e4 .clear{right:80px}
+.lmain .e .clear{
+    display:none;
+    position:absolute;
+    width:32px;
+    height:50px;
+    right:-10px;
+    top:0;
+    background-size:100px 80px;
+}
+.lmain .please{
+    position:relative;
+    line-height:24px;
+    font-size:12px;
+    color:#f43530;
+    padding-left:15px;
+   }
+.lmain .please a{color:#0686d8}
+.lmain .btn_p{
+    position:absolute;
+    width:32px;
+    height:28px;
+    right:-10px;
+    top:21px;
+	}
+.lmain .btn_t{
+    position:absolute;
+    right:0;top:11px;
+}
+.lmain .sure{
+    position:relative;
+    padding-top:50px; 
+}
+.lmain .sure .forget{
+    position:absolute;
+    line-height:40px;
+    font-size:14px;
+    top:0;
+    right:0;
+    color:#f66f17;
+}
+.lmain .stip{
+    font-size:13px;
+    color:#9f9f9f;
+    text-align:center;
+}
+.lmain .lgbtn{width:100%;
+    height:40px;
+    line-height:40px;
+    font-size:15px;
+    color:#fff;
+    letter-spacing:3px;
+    margin:20px 0;
+    background-color:#fcaa01;
+    border-radius:30px;
+}
+.lmain .lp{height:30px}
+.lmain .lp .fa{float:left;color:#777777}
+.lmain .lp .df{float:right;color:#f97432}
+.lmain .fb{
+    color:#9f9f9f;
+    text-align:center;
+    margin-top:10px;
+    padding:40px 0;
+    bottom:0;
+    left:0;}
+.lmain .fb a{color:#0686d8}
+.lmain .btn_j{
+    position:absolute;
+    width:32px;
+    height:50px;
+    top:0;
+    right:70px;
+    
+    z-index:2;
+ }
+.lmain .btn_m{
+    position:absolute;
+    width:80px;
+    height:25px;
+    line-height:25px;
+    font-size:12px;
+    color:#f97432;
+    text-align:center;
+    right:0;top:12px;
+    background-color:#fee3d6;
+    border-radius:15px;
+}

@@ -1,0 +1,324 @@
+/*--头部颜色层级改变--*/
+.change_index{position:relative;background-color:#f6f6f6;z-index:10}
+
+.newheader{
+    position:absolute;
+    top:0;
+    height:35px;
+    width:100%;
+    line-height:35px;
+    z-index:5;
+}
+.newheader .op{
+    float:right;
+    width:92px;
+    margin-top: 8px;
+}
+.newheader .op a:before{
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    content: ' ';
+    top: 50%;
+    left: 0;
+    margin: -6px 0 0 -6px;
+    background-color: #777;}
+.newheader .op a:first-child:before{display:none}
+.newheader .op a{position: relative;;float:left;color:#777;margin-left:11px}
+.newheader .op .user{float: right;width: 34px;height: 34px;}
+.newheader .op .user:after{
+    float:left;width:30px;
+    height:30px;content:'';
+    margin:4px 0px 0px;
+    background: url(../img/index/minggi/log/icon1.png) no-repeat -90px -8px;
+    background-size:342px auto;
+}
+/*--头部颜色层级改变--*/
+
+/*--搜索框及导航--*/
+.search_box{position:relative;background-color:#f6f6f5}
+.search_box .logo{
+    display:block;
+    position:relative;
+    width:163px;
+    text-align:center;
+    top:-4px;margin:0 auto;
+}
+.search_box .seek{padding:0 10px}
+.search_box .seek1{
+    padding:16px 16px;
+    border-bottom: 1px solid #f5f5f5;
+    background:#fff;
+}
+.search_box .seek1 a{
+    float:right;height:36px;line-height:36px;font-size:16px;color:#f97432}
+.search_box .enter{
+    position:relative;
+    margin:8px 0 10px;
+    padding-left:104px;
+    background-color:#f2f2f2;
+    overflow:hidden;
+    border-radius:18px;
+}
+.search_box .enter1{
+    width:80%;
+    margin:0;
+    padding-left:14px;
+    background:rgb(249, 249, 249);
+    border:none;
+}
+.search_box .enter1 a{float:right}
+.search_box .adr{position:absolute;width:104px;height:34px;top:0;left:0}
+.search_box .adr span{float:left;height:34px;line-height:34px;color:#696969}
+.search_box .adr .txt{max-width:48px}
+.search_box .adr_icon{
+    width:26px;
+    background:url(../img/index/minggi/log/icons_4.png) -1px -60px no-repeat;
+    background-size:135px auto;
+}
+.search_box .adr_arr{
+    width:22px;
+    background:url(../img/index/minggi/log/icon1.png) -54px -7px no-repeat;
+    background-size:342px auto;
+}
+.search_box .enter input{
+    position:relative;
+    width:100%;height:34px;
+    outline:none;
+    padding:0 20px 0 26px;
+    border:0 none;
+    background-color: #f2f2f2;
+}
+.search_box .enter input.bb1{caret-color:rgb(255, 81, 0);background:rgb(249, 249, 249)}
+.search_box .enter input.kw1{padding-left:15px}
+.search_box .enter input::-webkit-input-placeholder{font-size:12px;color:#c8c8c8}
+.search_box .enter input::-moz-placeholder{color:#c8c8c8}
+.search_box .enter input:-ms-input-placeholder{color:#c8c8c8}
+.search_box .enter input::placeholder{color:#c8c8c8}
+.search_box .enter .search_but{
+    position:absolute;
+    width:20px;height:34px;
+    line-height:34px;
+    top:0;left:104px;
+    background:url(../img/index/minggi/log/icon1.png) -170px -6px no-repeat;
+    background-size:342px auto}
+.search_box .enter .but1{left:16px}
+.search_box .enter .sbut1{left:95px}
+.search_box .nav{display:flex;height:68px;background-color:#fff}
+.search_box .nav a{position:relative;text-align:center;padding-top:40px;flex:1}
+.search_box .nav span{position:relative;color:#333;font-size:13px}
+.search_box .nav span:after{
+    position:absolute;
+    width:40px;height:40px;
+    content:'';
+    top:-40px;
+    left:50%;
+    margin-left:-20px;
+    background:url(../img/index/minggi/log/icon1.png?20190321) -7px -50px no-repeat;
+    background-size:342px auto}
+.search_box .nav a:nth-child(2) span:after{background-position:-44px -50px}
+.search_box .nav a:nth-child(3) span:after{background-position:-80px -50px}
+.search_box .nav a:nth-child(4) span:after{background-position:-118px -50px}
+.search_box .nav a:nth-child(5) span:after{background-position:-160px -50px}
+.search_box .nav .msearch:after{background:url(../img/index/minggi/log/nicon.png) -280px -5px no-repeat;
+background-size:382px auto}
+.search_box .nav a:nth-child(2) .msearch:after{background-position:-280px -5px}
+/*--搜索框END--*/
+
+/*--主要内容--*/
+.main{position:relative;min-height:100%;
+    padding-bottom:0px;
+    background-color:#f5f5f5}
+.main1 .search_box{padding-top:15px}
+.main .sec{margin-bottom:7px;background-color:#fff}
+/*.main section:nth-last-child(2){margin-bottom:0}*/
+footer{
+    position:absolute;
+    width:100%;
+    line-height:16px;
+    color:#969696;
+    text-align:center;
+    left:0;
+    bottom:64px;
+    padding:15px;z-index:1}
+footer a{font-size:12px;color:#969696}
+footer.ft1{bottom:102px}
+
+/*--banner--*/
+.home_banner{margin-bottom:7px}
+.banner{text-align:center}
+.banner img{width:100%}
+.swiper-container .swiper-pagination{bottom:2px}
+.swiper-container .swiper-pagination span{background-color:rgba(255,255,255,0.5)}
+.swiper-container .swiper-pagination .swiper-pagination-bullet-active{background-color:rgba(255,255,255,1)}
+/*--bannerEND--*/
+
+/*--热门职位--*/
+.speed{
+    position:relative;padding:12px 15px;overflow:hidden;
+}
+.speed:after{
+    position:absolute;
+    width:100%;
+    height:1px;
+    content:"\00a0";
+    bottom:0px;left:16px;
+    background-color:#e5e5e5;
+}
+.speed p{
+    position:relative;
+    height:16px;
+    line-height:16px;
+    font-size:15px;
+    color:#f97432}
+.speed .more{
+    position:absolute;
+    width:45px;
+    height:32px;
+    line-height:32px;
+    font-size:13px;
+    color:#696969;
+    top:0px;right:10px}
+.speed .more:after{
+    position:absolute;
+    width:20px;height:32px;
+    content:'\00a0';top:0;right:0;
+    background:url(../img/index/minggi/log/icon1.png?20190321) -134px -8px no-repeat;
+    background-size:342px auto;
+}
+
+.hot{padding:10px 18px 0}
+.hot li{position:relative;float:left;width:23.5%;margin:0 2% 10px 0;border:1px solid #ededed;
+	box-sizing:border-box}
+.hot li:nth-child(4n){margin-right:0}
+.hot li a{display:block;width:100%;height:40px;line-height:40px;color:#333;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.hot li a.on{color:#ff7e3e}
+.hot1{padding:0}
+.hot1 li{width:25%;margin:0;border:none}
+.hot1 li:after{position:absolute;width:1px;height:20px;content:"";right:0;bottom:10px;background-color:#ededed}
+.hot1 li:before{position:absolute;width:30px;content:"";left:50%;top:0;margin-left:-15px;border-bottom:1px dashed #ededed}
+.hot1 li:nth-child(4n):after{display:none}
+.hot1 li:nth-child(1):before,.hot1 li:nth-child(2):before,.hot1 li:nth-child(3):before,.hot1 li:nth-child(4):before{display:none}
+.hot1 li a.mk{position: relative;padding-top:25px;}
+.hot1 li a.mk:after{position:absolute;width:30px;height:20px;content:"";top:14px;left:50%;margin-left:-15px;background:url(../img/index/minggi/log/icons_4.png) -8px -10px no-repeat;
+background-size:135px}
+.hot1 li:nth-child(2) a.mk:after{background-position:-42px -10px}
+.hot1 li:nth-child(3) a.mk:after{background-position:-72px -10px}
+.hot1 li:nth-child(4) a.mk:after{background-position:-99px -10px}
+.hot1 li:nth-child(5) a.mk:after{background-position:-8px -34px}
+.hot1 li:nth-child(6) a.mk:after{background-position:-42px -34px}
+.hot1 li:nth-child(7) a.mk:after{background-position:-72px -34px}
+.hot1 li:nth-child(8) a.mk:after{background-position:-99px -34px}
+/*--热门职位END--*/
+
+/*--名企专区--*/
+.fc a{position:relative;display:block;padding:10px 40px 10px 82px;background-color:#fff}
+.fc a:after{position:absolute;height:1px;content:'\00a0';bottom:0;left:10px;right:0;background-color:#f4f4f4}
+.fc a:before{position:absolute;width:42px;height:40px;content:'\00a0';top:0px;;right:0px;background:url(../img/index/minggi/log/mq_icon.png) -20px -25px no-repeat;background-size:278px auto}
+.fc a:last-child:after{display:none}
+.fc a img{position:absolute;left:10px;top:14px}
+.fc a .limg{left:16px;top:16px}
+.fc a strong{display:block;width:100%;height:26px;line-height:26px;font-size:15px;font-weight:normal;color:#333;margin-bottom:7px}
+.fc a em,.fc a span{display:block;width:100%;height:20px;line-height:20px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.fc a .mq_name{font-size:13px;color:#969696}
+.fc a .mq_num{font-size:12px;color:#646464}
+.fc a .mq_num i{color:#ff7e3e}
+.fc1 a{padding:12px 40px 16px 82px}
+.allMq{display:block;height:40px;border-top:1px solid #dedede;text-decoration:none}
+.allMq span{display:block;position:relative;width:100px;margin:10px auto;color:#666}
+.allMq span:after{position:absolute;content:"";width:15px;height:25px;right:0px;top:-3px;background:url(../img/index/minggi/log/nicon.png) -231px -145px no-repeat;background-size: 382px auto}
+/*--名企专区--*/
+
+/*--薪资高--*/
+.h_pay{padding:6px 10px}
+.h_pay a{float:left;width:25%;height:40px;line-height:40px;font-size:15px;font-weight:bold;color:#ff7e3e;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;border-right:1px solid #ededed;
+box-sizing:border-box}
+.h_pay a:last-child{border:0 none}
+/*--薪资高END--*/
+
+/*--福利好--*/
+.special{border-bottom:1px solid #ededed}
+.special:last-child{border-bottom:0 none}
+.special a{float:left;position:relative;width:50%;height:65px;line-height:65px;font-size:15px;color:#333}
+.special a span{position:absolute;width:120px;height:50px;line-height:50px;top:50%;left:50%;margin:-25px 0 0 -60px}
+.special a span:after{position:absolute;width:50px;height:50px;content:'';top:0;right:0px;background:url(../img/index/minggi/log/icon1.png?20190321) 0 0 no-repeat;
+	background-size:342px auto}
+.special .p_job span:after{background-position:0px -100px}
+.special .n_exp span:after{background-position:-59px -100px}
+.special .free span:after{background-position:-118px -100px}
+.special .train span:after{background-position:-177px -100px}
+/*--福利好END--*/
+
+/*--推荐职位--*/
+.m_job .e{position:relative;display:block;padding:10px 0}
+.m_job .e:after{position:absolute;height:1px;content:'\00a0';bottom:0px;left:10px;right:0;background-color:#f4f4f4}
+.m_job .e:last-child:after{display:none}
+.m_job .e .l_box{padding:0 18px}
+.m_job .e strong span, .m_job .e i, .m_job .e .gs, .m_job .e .dq,.m_job .e .adr{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.m_job .e strong,.m_job .e aside{position:relative;display:block;height:24px;line-height:24px;font-size:16px;font-weight:normal;color:#333;padding-right:98px}
+.m_job .e aside{padding-right:85px}
+.m_job .e strong span,.m_job .e aside span{float:left;max-width:100%}
+.m_job .e aside span.gs{max-width:65%;font-size:13px;color:#969696}
+.m_job .e i,.m_job .e em{position:absolute;width:88px;height:24px;line-height:24px;text-align:right;top:10px;right:10px}
+.m_job .e .c_light{font-size:15px}
+.m_job .e .dq{max-width:30%;font-size:13px;color:#969696;margin-left:8px}
+.m_job .e .tag{padding-right:60px}
+.m_job .e .tag span{float:left;height:20px;line-height:20px;font-size:12px;color:#0686d8;text-align:center;padding:0 8px;white-space:nowrap;margin:6px 5px 0 0;background-color:#eefaff}
+.m_job .btn{position:absolute;width:60px;height:25px;line-height:25px;font-size:13px;color:#fff;text-align:center;bottom:10px;right:18px;padding:0;background-color:#ff7e3e;border-color:#ff7e3e}
+.m_job .btn.b_gray{color:#999;background-color:#ddd}
+/*--推荐职位END--*/
+
+/*--专属推荐--*/
+.more_reco{height:40px;line-height:40px;text-align:center;background-color:#fff;border-top:1px solid #e5e5e5}
+.more_reco a{display:block;font-size:13px;color:#ff7c3b}
+/*--专属推荐END--*/
+
+.pop_tg .login button{border:0 none;background-color:#fef1ea}
+/*--主要内容END--*/
+
+/*--输入浮层--*/
+.search_box.index_up{position:relative;background-color: #fff;z-index:10}
+.search_box.index_up1{z-index:5}
+.search_con{display:none;position:absolute;width:100%;left:0;background-color:#fff;border-top:1px solid #d4d4d4;z-index:10}
+.search_con .tab{height:34px;margin:0 14px}
+.search_con .tab span{float:left;width:50%;height:34px;line-height:34px;color:#777;text-align:center;background-color:#ededed;border:1px solid #c9c9c9}
+.search_con .tab span.on{color:#000;background-color:#fff}
+.search_con .tab span:first-child{border-right:0 none;border-radius:5px 0 0 5px}
+.search_con .tab span:last-child{border-radius:0 5px 5px 0}
+.search_con .title{position:relative;height:44px;line-height:40px;font-size:13px;color:#9b9b9b;padding-left:25px}
+.search_con .title:after{position:absolute;width:20px;height:20px;content:'\00a0';top:10px;left:0;background:url(../img/index/minggi/log/icon_histroy.png) center no-repeat;
+background-size:20px auto}
+.search_con .history{padding:0 16px}
+.search_con .history .e{height:40px}
+.search_con .history .e a,.search_con .hot .e{float:left;max-width:90%;height:26px;line-height:26px;color:#333;padding:0 14px;background-color:#fff;border:1px solid #d9d9d9;border-radius:26px}
+.search_con .hot{padding:0 16px}
+.search_con .hot .title:after{background:url(../img/index/minggi/log/icon_hot.png) center no-repeat;
+background-size:20px auto}
+.search_con .hot .e{color:#333;margin:0 10px 16px 0;border-color:#f66f17}
+.search_con .hot .box{overflow:hidden}
+.search_con .lst .e{position:relative;display:block;height:40px;line-height:40px;color:#f66f17;text-indent:25px}
+.search_con .lst .e1{color:#333;text-indent:35px;}
+.search_con .lst .e:after{position:absolute;height:1px;content:'\00a0';right:0;bottom:0;left:14px;background-color:#d2d2d2}
+.search_con .lst .e1:before{position:absolute;left:12px;height:40px;width:20px;content:'';background:url(../img/index/minggi/log/icon1.png) -170px -6px no-repeat;background-size: 342px auto}
+.search_con .lst .e:last-child:after{display:none}
+.search_con .lst .e1:after{display:none}
+.search_con .lst .e span{color:#9b9b9b}
+.search_con .lst .e1 span{color:#333}
+.search_con .m_class{padding:0 16px}
+.search_con .m_class .title{height:39px;margin-bottom:16px;border-bottom:1px solid #ededed;font-size:16px;color:#333}
+.search_con .m_class li{float:left;width:30%;margin:0 0 12px;border:1px solid #ededed;box-sizing:border-box}
+.search_con .m_class li a{display:block;width:100%;height:30px;line-height:30px;color:#333;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.search_con li:nth-child(3n-1){margin:0 5% 12px}
+.split{width:100%;height:10px;background:#f5f5f5}
+
+.con1{position:fixed;max-height:90%;top:0;border:none;background-color:transparent;overflow:scroll }
+.con1 .f_room{border-top:1px solid #fff;background-color: #fff;max-height:90%}
+.con1 .a_job{max-height:83%;overflow:scroll}
+.con1 .a_job .title:after{height:22px;width:22px;background:url(../img/index/minggi/log/nicon.png) -206px -149px no-repeat;background-size:382px auto}
+.con1 .a_job .h_job:after{background-position:-171px -149px}
+.con1 .a_job .h_comp:after{background-position:-134px -149px}
+/*--输入浮层END--*/
+
+/* 新浮层 */
+.floor{position:absolute;top:0;width:100%;z-index:10}
+

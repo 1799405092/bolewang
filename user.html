@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>用户登录注册界面</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	  <link rel="stylesheet" href="css/jigsaw.css">
+	  <style>
+	  	
+	  	  #msg {
+      width: 100%;
+      line-height: 40px;
+      font-size: 14px;
+      text-align: center;
+    }
+	  </style>
+</head>
+<body>
+	<div class="jq22-container" style="padding-top:10px">
+		<div class="login-wrap">
+			<div class="login-html">
+				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登录</label>
+				<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">注册</label>
+				<div class="login-form">
+					<form>
+					<div class="sign-in-htm" id="login">
+						<div class="group">
+							<label for="user" class="label">用户名</label>
+							<input id="uname" name="username" value="admin" type="text" class="input" onblur="out_luname_msg()">
+							<span id="ln_msg"></span>
+						</div>
+						<div class="group">
+							<label for="pass" class="label">密码</label>
+							<input id="upwd" type="password" class="input" name="password" data-type="password" onblur="out_lupwd_msg()">
+							<span id="lp_msg"></span>
+						</div>
+						<div class="group">
+							<div class="container">
+							    <div id="captcha" style="position: relative" data-type="password"></div>
+								<div id="msg"></div>
+							</div>
+						</div>
+						<div class="group">
+							<input id="check" type="checkbox" class="check" checked>
+							<label for="check"><span class="icon"></span> 保持登录</label>
+						</div>						
+						<div class="group">
+							<!-- <input type="button" class="button" value="登录" onClick="sub()"> -->
+							<button onclick="sub()" id="tlogin" class="button">登录</button>
+						</div>
+						<div class="hr"></div>
+						<div class="foot-lnk">
+							<a href="#forgot">忘记密码?</a>
+						</div>
+					</div>
+					</form>
+					<form>
+					<div class="sign-up-htm" id="reg">
+						<div class="group">
+							<label for="user" class="label">用户名</label>
+							<input id="runame" type="text" class="input" onfocus="runame_msg()" onblur="out_runame_msg()">
+							<span id="rn_msg"></span>
+						</div>
+						<div class="group">
+							<label for="pass" class="label">密码</label>
+							<input id="rupwd" type="password" class="input" data-type="password" onfocus="rupwd_msg()" onblur="out_rupwd_msg()">
+							<span id="rp_msg"></span>
+						</div>
+						<!-- <div class="group">
+							<label for="pass" class="label">重复密码</label>
+							<input id="passs" type="password" class="input" data-type="password">
+						</div> -->
+						<div class="group">
+							<label for="pass" class="label">邮箱地址</label>
+							<input type="text" class="input" id="remail" onfocus="remail_msg()" onblur="out_remail_msg()">
+							<span id="e_msg"></span>
+						</div>
+						<div class="group">
+							<a href="register.html"><input type="submit" class="button" value="注册" onclick="user_reg()"></a>
+						</div>
+						<div class="hr"></div>
+						<div class="foot-lnk">
+							<label for="tab-1">已经成员?</a>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script src="js/jigsaw.js"></script>
+<script>
+	/*var flag=false;	
+	function sub(){
+		var name=document.getElementById('username').value;
+		var pass=document.getElementById('password').value;
+		var cname="zhangrenduo";
+		var cpass="123456";
+		if(name==cname && pass==cpass && flag==true){
+		alert("登录成功!")
+			window.location.href="index.html";
+		}else{
+			if(flag==false){
+				alert("验证失败!")
+				return;
+			}
+			alert("用户名或密码错误!")
+		}
+			}
+ 	 jigsaw.init(document.getElementById('captcha'), function () {
+  	 flag=true;
+    document.getElementById('msg').innerHTML = '登录成功！'  
+  })*/
+  //登录
+  var flag=false;	
+function out_luname_msg() {
+	if (!uname.value) {
+		ln_msg.innerHTML = "用户名为空";
+		ln_msg.style.color = "#f00";
+		return;
+	} else {
+		ln_msg.innerHTML = "输入成功";
+		ln_msg.style.color = "#0f0";
+		return;
+	}
+}
+
+function out_lupwd_msg() {
+	if (!upwd.value) {
+		lp_msg.innerHTML = "密码为空";
+		lp_msg.style.color = "#f00";
+		return;
+	} else {
+		lp_msg.innerHTML = "输入成功";
+		lp_msg.style.color = "#0f0";
+		return;
+	}
+}
+function sub() {
+	var $uname = uname.value;
+	var $upwd = upwd.value;
+	//1.获取xhr异步对象
+	var xhr = new XMLHttpRequest();
+	//4.绑定监听，获取响应
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var result = xhr.responseText;
+			if (result == 1 && flag==true) {
+				alert("登录成功");
+				return window.location.href="resume.html";
+			} else {
+				if(flag==false){
+				alert("验证失败!")
+				return;
+			}
+			alert("用户名或密码错误!")
+			}
+		}
+	}
+	//非空判断
+	if (!$uname) {
+		document.getElementById("ln_msg").style.color = "#f00";
+		ln_msg.innerHTML = "用户名为空";
+		return;
+	}
+	if (!$upwd) {
+		document.getElementById("lp_msg").style.color = "#f00";
+		lp_msg.innerHTML = "用户密码为空";
+		return;
+	}
+	//2.打开连接，创建对象
+	xhr.open("get", "http://127.0.0.1:3000/user/login/" + $uname + "-" + $upwd, true);
+	//3.发送请求
+	xhr.send();
+}
+jigsaw.init(document.getElementById('captcha'), function () {
+  	 flag=true;
+    document.getElementById('msg').innerHTML = '登录成功！'  
+  })
+//注册
+function runame_msg() {
+	rn_msg.innerHTML = "用户名2~8位";
+	rn_msg.style.color = "#999";
+}
+
+function rupwd_msg() {
+	rp_msg.innerHTML = "密码6~12位";
+	rp_msg.style.color = "#999";
+}
+
+function remail_msg() {
+	e_msg.innerHTML = "邮箱有含有@";
+	e_msg.style.color = "#999";
+}
+
+function out_rupwd_msg() {
+	if (rupwd.value) {
+		if (rupwd.value.length >= 6 && upwd.value.length <= 12) {
+			rp_msg.innerHTML = "输入成功";
+			rp_msg.style.color = "#0f0";
+		} else {
+			rp_msg.innerHTML = "密码格式不正确";
+			rp_msg.style.color = "#f00";
+		}
+	} else {
+		rp_msg.innerHTML = "密码不能为空";
+		rp_msg.style.color = "#f00";
+	}
+}
+
+function out_remail_msg() {
+	if (remail.value) {
+		if (remail.value.length >= 3) {
+			e_msg.innerHTML = "输入成功";
+			e_msg.style.color = "#0f0";
+		} else {
+			e_msg.innerHTML = "邮箱格式不正确";
+			e_msg.style.color = "#f00";
+		}
+	} else {
+		e_msg.innerHTML = "邮箱不能为空";
+		e_msg.style.color = "#f00";
+	}
+}
+
+var str = false;
+
+function out_runame_msg() {
+	if (runame.value) {
+		if (runame.value.length >= 2 && uname.value.length <= 8) {
+			var $uname = runame.value;
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var result = xhr.responseText;
+					if (result == "1") {
+						document.getElementById("rn_msg").style.color = "red";
+						rn_msg.innerHTML = "该用户已存在";
+						str = true;
+					} else {
+						document.getElementById("rn_msg").style.color = "green";
+						rn_msg.innerHTML = "该用户名可用"
+					}
+				}
+			}
+			xhr.open("get", "/double?uname=" + $uname, true);
+			xhr.send();
+		} else {
+			rn_msg.innerHTML = "用户名格式不正确";
+			rn_msg.style.color = "#f00";
+		}
+	} else {
+		rn_msg.innerHTML = "用户名不能为空";
+		rn_msg.style.color = "#f00";
+	}
+}
+
+function user_reg() {
+	var $uname = runame.value;
+	var $upwd = rupwd.value;
+	var $email = remail.value;
+	if (!$uname) {
+		rn_msg.innerHTML = "用户名称为空";
+		rn_msg.style.color = "#f00"
+		return;
+	}
+	if (!$upwd) {
+		rp_msg.innerHTML = "用户密码为空";
+		rp_msg.style.color = "#f00"
+		return;
+	}
+	if (!$email) {
+		e_msg.innerHTML = "邮箱为空";
+		e_msg.style.color = "#f00"
+		return;
+	}
+	if (str == true) {
+		str = false;
+		rn_msg.innerHTML = "该用户名以被注册";
+		rn_msg.style.color = "#f00";
+	} else {
+		if (rn_msg.innerHTML == "该用户名以被注册" || rn_msg.innerHTML == "该用户已存在") {
+			alert("该用户以被注册");
+		} else {
+			//1.获取xhr异步对象
+			var xhr = new XMLHttpRequest();
+			//4.绑定监听，获取响应
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var result = xhr.responseText;
+					if (result == 1) {
+						alert("注册成功");
+						rn_msg.innerHTML = "该用户名以被注册";
+						rn_msg.style.color = "#f00";
+						return window.location.href="index.html";
+					} else {
+						alert("注册失败");
+						return;
+					}
+				}
+			}
+			//2.打开连接，创建请求
+			xhr.open("post", "/user/reg", true);
+			//3.发送请求
+			var formdata = "uname=" + $uname + "&upwd=" + $upwd +"&email"+$email;
+			//设置请求头信息
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.send(formdata);
+		}
+	}
+}
+</script>
+</body>
+</html>

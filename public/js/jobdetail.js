@@ -1,0 +1,26 @@
+$(function(){var e,c,b;var d=$("input[name='topic']").val();
+    if(showJobdetailAPPPop()){pop.ini({msg:e},{title:[c,b],callback:["","openAPP()"]});
+    setAPPlocalStorage()}var a=localStorage.getItem("applyAmimate");
+    if(!a){$(".an_area").show()}});var showJobdetailAPPPop=function(){
+        var e=navigator.userAgent.toLowerCase();
+        if(e.indexOf("51jobapp")!="-1"){return false}var a=storage.json_get("apppop");
+        if(a){var c=new Date(),d=a.year,f=a.month,b=a.day;
+            if(d==c.getFullYear()&&(f==c.getMonth()+1)&&b==c.getDate()){
+                return false}else{storage.json_set("apppop",{year:d,month:f,day:b});return true}}return true};function openAPP(){var b="MIDUODUO_JOBDETAIL_OPENAPP",h="OPENAPP";
+                var e=navigator.userAgent.toLowerCase();$.getJSON(a);var f=$_CONFIG.c!=""?"//app.51mdd.com/?isdownload=1&c="+$_CONFIG.c:"//app.51mdd.com/?isdownload=1&c=PM_MDD_H5_ZWXQY";if(duringActivity("2019/8/19 00:00:00","2019/8/23 23:59:59")){f="//app.51mdd.com/?isdownload=1&c=hongbao_H5ZWXQY";window.location.href="miduoduo://home/show_redirect_url?redirectname=homeactivity&deeplinkid=dlmdd_mddh5_mddzwxqyhb"}else{
+                    var c=$_CONFIG.deeplinkid!=""?$_CONFIG.deeplinkid:"dlmdd_mddh5_mddzwxqy";var g="miduoduo://home/show_job_info?jobid="+$("#jobid").
+                    val()+"&deeplinkid="+c;$("#urlsceme").attr("href",g).click()}
+                    var d=setTimeout(function(){window.location.href=f},2000);document.addEventListener("visibilitychange",
+                    function(){if(document.visibilityState=="hidden"){clearTimeout(d)}});closeAppPop();return false}var closeAppPop=function(){
+                        var b="MIDUODUO_JOBDETAIL_CLOSEAPPPOP",c="CLOSEAPPPOP";var a=$_CONFIG.domain+"/ajax/my/writelog.ajax.php?jsoncallback=?&tracetag="+b+"&msg="+c;$.getJSON(a);setAPPlocalStorage();pop.close();$("#shadow").hide()};var setAPPlocalStorage=function(){
+                            var a=storage.json_get("apppop");var b=new Date(),c=month=day=times="";c=b.getFullYear();month=b.getMonth()+1;day=b.getDate();storage.json_set("apppop",{year:c,month:month,day:day})};$("#chakan").click(
+                                function(){var b="MIDUODUO_JOBDETAIL_CHAKAN",c="JOBDETAIL";var a=$_CONFIG.domain+"/ajax/my/writelog.ajax.php?jsoncallback=?&tracetag="+b+"&msg="+c;$.getJSON(a);phoneshow=$("#phoneshow").val();$("#phone").html(phoneshow);$(this).hide();$(this).next().hide()});$(".call_btn").click(
+                                    function(){jobphone=$(".call_btn").attr("value");location.href=jobphone});$(".jobdetail_icon").click(function(){$(".l_hi").hide()});$(".an_del").click(function(){$(".an_area").hide();localStorage.setItem("applyAmimate",1)});$("#send_sms").click(function(){jobid=$("#jobid").val();
+                                    var b=$_CONFIG.domain+"/ajax/my/sendsms.ajax.php";var c={jobid:jobid};
+                                    var a=ajaxRequest(b,c,"post","json");if(a.status==2||a.status==3){pop.ini({msg:a.message},{title:["取消","确定"],callback:["","norenzheng()"]})}else{
+                                        if(a.status==4){location.href=$_CONFIG.domain+"/my/login.php?callback="+encodeURIComponent(location.href)}else{pop.msg(a.message)}}});var norenzheng=function(){location.href=$_CONFIG.domain+"/my/my51job.php"};$("#checkmap").click(function(){$("#mapForm").attr("action",$_CONFIG.domain+"/search/jobmap.php?t=1").submit()});$(".icon").click(function(){$(".tips").hide()});$(".jobdetailmore").click(function(){location.href=urlstring});$("#prizejob").click(function(){var f=$("#prize").attr("data");
+                                        $("#shadow").after(b);var e=document.body.scrollTop||document.documentElement.scrollTop;var d=document.documentElement.clientHeight;var c=$("body").height();
+                                        var a=0;var g=c>d?c:d;if(d>160){a=(d-160)/2}e+=a;$(".pop_award").css("top",e);$("#shadow,.pop_award").show()});
+                                        var closeprize=function(){$("#shadow").attr("style","display:none");$(".pop_award").hide();return false};$(".searchmore").click(function(){
+                                            var a=$(this).attr("value");location.href=$_CONFIG.domain+"/search/jobmore.php?jobid="+a});$(".collectact").click(function(){if($("#popMsg")[0]&&$("#popMsg").hasClass("on")){return false}
+                                            var e=$(this).text();var d=$(this).attr("value");var b=$_CONFIG.domain+"/ajax/search/collect.ajax.php";if(e=="收藏"){var f=window.location.href;var c={jobid:d,redirect:f};var a=ajaxRequest(b,c,"post","json");if(a.status==1){pop.msg(a.desc);$(this).addClass("mk").removeClass("collect");$(this).text("已收藏")}else{if(a.url){location.href=a.url;return false}pop.msg(a.desc);return false}}else{var c={jobid:d,type:"cancel"};var a=ajaxRequest(b,c,"post","json");if(a.status==1){pop.msg(a.desc);$(this).addClass("collect").removeClass("mk");$(this).text("收藏")}else{pop.msg(a.desc);return false}}});

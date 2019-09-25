@@ -1,0 +1,77 @@
+/*--首页弹窗--*/
+.pop_tg{position:fixed;width:100%;top:20%;left:0;z-index:10}
+#loginpop{top:20%}
+.pop_tg .in{position:relative;width:265px;margin:0 auto;padding-bottom:20px;border-radius:5px}
+.pop_tg .close{position:absolute;width:26px;height:26px;top:32%;right:6px;background:url(../img/index/minggi/log/icon1.png) -209px -11px no-repeat;z-index:12;background-size:342px auto}
+.pop_tg .tgimg{position:relative;width:100%;vertical-align:top;z-index:1;border-radius:5px 5px 0 0}
+.pop_tg .info{position:absolute;top:106px;left:0;right:0;margin:0 auto;z-index:11}
+.pop_tg .info p{font-size:14px;line-height:20px;color:#513e2f;text-align:center;padding-top:20px}
+.pop_tg .info p span{font-size:16px;font-weight:bold;color:#333;letter-spacing:6px}
+.pop_tg .op{padding-top:22px}
+.pop_tg .op span{float:left;width:50%;padding:0 8% 0 9%}
+.pop_tg .op span:last-child{padding:0 9% 0 8%}
+/*--首页弹窗END--*/
+
+/*纯文字提示*/
+/* #popMsg{position:fixed;width:100%;text-align:center;opacity:0;top:50%;left:0;margin-top:-20px;z-index:9;
+	transition:all .5s ease-out}
+#popMsg.on{opacity:1;transform:translate3d(0,-20px,0)}
+#popMsg span{display:inline-block;max-width:80%;line-height:20px;font-size:12px;color:#fff;padding:10px 18px;background-color:rgba(0,0,0,.5);border-radius:5px} */
+
+/*对话框*/
+/* #popDialog{position:fixed;width:100%;top:50%;left:0;margin-top:-90px;z-index:10}
+#popDialog .in{min-width:280px;max-width:76px;margin:0 auto;padding-top:15px;background-color:#fff;
+	border-radius:5px}
+#popDialog .title{text-align:center;padding:0 10px}
+#popDialog .cn{font-size:13px;text-align:center;padding:10px 15px 15px}
+#popDialog .op{height:50px;line-height:50px;text-align:center;border-top:1px solid #d4d4d4}
+#popDialog .op span{float:left;width:50%;color:#777}
+#popDialog .op span:last-child{border-left:1px solid #d4d4d4;color:#f66f17}
+#popDialog .op.o2 span{width:100%;color:#f66f17;border-left:0 none} */
+
+/*对话框*/
+#popMobile{position:fixed;width:100%;top:50%;left:0;margin-top:-90px;z-index:10}
+#popMobile .in{min-width:280px;max-width:76px;margin:0 auto;padding-top:15px;background-color:#fff;
+border-radius:5px}
+#popMobile .title{text-align:center;padding:0 10px}
+#popMobile .cn{font-size:13px;text-align:center;padding:10px 15px 15px}
+#popMobile .op{height:50px;line-height:50px;text-align:center;border-top:1px solid #d4d4d4}
+#popMobile .op span{float:left;width:50%;color:#777}
+#popMobile .op span:last-child{border-left:1px solid #d4d4d4;color:#f66f17}
+#popMobile .op.o2 span{width:100%;color:#f66f17;border-left:0 none}
+
+/*弹层内表单*/
+ .popfm .e{position:relative;line-height:30px;min-height:30px;font-size:13px;padding:10px 0 10px 3.5em;border-bottom:1px solid #d4d4d4}
+.popfm .e:last-child{border-bottom:0 none}
+.popfm label{position:absolute;top:10px;left:0}
+.popfm .txt{position:relative;float:left;width:100%;height:30px;font-size:13px;background-color:transparent;z-index:1}
+.popfm .but{position:absolute;width:75px;height:30px;line-height:30px;font-size:13px;letter-spacing:0;top:10px;right:0;padding:0;border:0 none;z-index:2}
+.popfm .but.b_gray{color:#fff}
+.popfm .err{position:relative;line-height:16px;font-size:12px;color:#f43530;text-align:left;clear:both;padding-right:35px;z-index:2}
+.popfm .err span{padding-left:17px;background:url(../img/index/minggi/log/icon_err.png) left center no-repeat;background-size:11px 11px} 
+
+/* 有奖职位提示
+ .pop_award{box-sizing:border-box}
+.pop_award{display:none;position:absolute;width:100%;top:0;padding:0 30px;z-index:13;opacity:inherit}
+.pop_award .cn{background-color:#FFF;padding-bottom:10px}
+.pop_award .cn strong{display:block;line-height:24px;color:#777;margin:0 0 10px 16px;padding:18px 16px 8px 0;border-bottom:1px solid #e1e1e1}
+.pop_award .pt{padding:10px 20px 0;line-height:28px}
+.pop_award .pt span{color:#ff0d0d}
+.pop_award .center .but{width:120px}  */
+
+/* 申请成功页
+ .pop_tg .code{text-align:center}
+.pop_tg .record .close{top:23%}
+.pop_tg .record .info p{padding-top:18px}
+.pop_tg .record .info p.p_top{padding-top:0}
+.pop_tg .record .info p.p_top .mdd{color: #f97432}
+.pop_tg .code .mdd{height:26px;line-height:26px;color:#f97432}
+.pop_tg .code .mdd span{color:#333}
+.pop_tg .code .gzcontent{line-height: 24px;color:#999;font-size: 12px}
+
+@media screen and (width:320px){
+	.pop_tg{top:3%}
+}
+@media screen and (width:320px){
+	#pop_tg1{top:10%}
+}  */
